@@ -3,6 +3,7 @@ package Utils;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,6 +19,8 @@ public class ConfigReader {
 		LOGGER.info("Properties file loaded from env: "+env);
 		prop = new Properties();
 		String path = getPropFilePath(env);
+//		ResourceBundle rb = ResourceBundle.getBundle("config");
+//		rb.getString(path)
 		
 		if(env !=null) {
 			try {
